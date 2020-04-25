@@ -1,0 +1,19 @@
+{
+    "particles":{
+        "number":{
+            "value": 250
+        },
+        "color":{
+            "value": "#fff"
+        },
+        "shape":{
+            "type": "circle"
+        },
+        "opacity":{
+            "value": 0.5
+        },
+        "size":{
+            "value": 5
+        }
+    }
+}

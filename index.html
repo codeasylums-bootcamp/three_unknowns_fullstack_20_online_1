@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Landing page</title>
+    </head>
+    <style>
+        .slide{
+            display: none;
+            vertical-align: middle;
+            color: #fff;
+        }
+        #particles-js{
+            background-image:  linear-gradient(to right, #556270 , #ff6b6b);;
+            height: 100vh;
+        }
+        #quotes{
+            position: absolute;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        main{
+            display: none;
+        }
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <body>
+        <div class="container-fluid" id="particles-js"></div>
+        <div id="quotes">
+            <h2 class="slide">QUARANTINE TIME</h2>
+            <h2 class="slide">BORED AT HOME?</h2>
+            <h2 class="slide">THEN YOU HAVE</h2>
+            <h2 class="slide">COME TO THE RIGHT PLACE</h2>
+        </div>
+        <main id="main">
+            <div>
+                <p>Testing after showing introduction</p>
+            </div>
+        </main>
+        <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+        <script>
+            setTimeout(displayMain, 4000);
+            function displayMain(){
+                document.getElementById("main").style.display = "block";
+                document.getElementById("particles-js").style.display = "none";
+            }
+            let slideIndex=0;
+            slide();
+            function slide(){
+                let texts = document.getElementsByClassName("slide");
+                for (let i = 0; i < texts.length; i++) {
+                    texts[i].style.display = "none"; 
+                }
+                slideIndex++;
+                console.log(slideIndex);
+                if(slideIndex>4) return;
+                texts[slideIndex-1].style.display = "block"; 
+                setTimeout(slide, 1000); 
+            }
+        </script>
+        <script>
+            particlesJS.load("particles-js", "particles.json")
+        </script>
+    </body>
+</html>
