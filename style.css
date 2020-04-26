@@ -1,5 +1,3 @@
-
-
 .flip-card {
   background-color: transparent;
   width: 300px;
@@ -43,4 +41,8 @@
   background-color: rgb(106, 255, 46);
   color: white;
   transform: rotateY(180deg);
+}
+
+.btn-success {
+  background-color: rgb(106, 255, 46);
 }
