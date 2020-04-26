@@ -1,92 +1,86 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+	Full Motion by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
 <html>
-    <head>
-        <title>Movie Recommendation</title>
-    </head>
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
-    <style>
-        body{
-            font-family: "Open Sans";
-            background-image:  linear-gradient(to right, #000000 , #e74c3c);
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(img/home_background.jpg);
-            height: 100vh;
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-        .slide{
-            display: none;
-            vertical-align: middle;
-            color: #fff;
-        }
-        #particles-js{
-            /*background-image:  linear-gradient(to right, #556270 , #ff6b6b);*/
-            background-image:  linear-gradient(to right, #000000 , #e74c3c);
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(img/home_background.jpg);
-            height: 100vh;
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            height: 100vh;
-        }
-        #quotes{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-        }
-        main{
-            display: none;
-        }
-    </style>
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-      <link rel = "stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <body onload="getMoviesOnLoad()">
-        <div class="container-fluid" id="particles-js"></div>
-        <div id="quotes">
-            <h2 class="slide">QUARANTINE TIME</h2>
-            <h2 class="slide">BORED AT HOME?</h2>
-            <h2 class="slide">THEN YOU HAVE</h2>
-            <h2 class="slide">COME TO THE RIGHT PLACE</h2>
-        </div>
-        <br><br>
-        <main id="main">
-            <navbar class="navbar navbar-expand-lg navbar-transparent bg-transparent">
-                <a class="navbar-brand" href="/three_unknowns_fullstack_20_online_1/about_us.html">About Us</a>
-                <ul class="navbar-nav mr-auto">
-                    
-                </ul>
-            </navbar>
-            <div>
-                <div class="container">
-        <div class="row">
-          <div class="col-md-2"></div>
-          <div class="col-md-8">
-              <div class="inputBarSpace">
-                <input type="text" class="form-control" id="inputBar" placeholder="Enter Movie name">
-            </div>
-          </div>
-          <div class="col-md-2">
-            <button class="btn btn-success btn-My" id="submit">Search</button>
-          </div>
-        </div>
-    </div>
-    <br><br>
-    <div class="container">
-      <div class="row" id="movies">
+	<head>
+		<title>Full Motion</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="style.css"/>
+	</head>
+	<body id="top">
 
-      </div>
-    </div>
-    </div>
+			<!-- Banner -->
+			<!--
+				To use a video as your background, set data-video to the name of your video without
+				its extension (eg. images/banner). Your video must be available in both .mp4 and .webm
+				formats to work correctly.
+			-->
+			<div class="container-fluid" id="particles-js"></div>
+        	<div id="quotes">
+				<h2 class="slide">QUARANTINE TIME</h2>
+				<h2 class="slide">BORED AT HOME?</h2>
+				<h2 class="slide">THEN YOU HAVE</h2>
+				<h2 class="slide">COME TO THE RIGHT PLACE</h2>
+        	</div>
+			<main>
+				<section id="banner" data-video="images/banner">
+					<div class="inner">
+						<header>
+							<h1>Movie Recommendation System</h1>
+							<p>Stuck at home because of quarantine?<br/>
+							Look no further and search below for your favourite movies</p>
+						</header>
+						<a href="#main" class="more">Learn More</a>
+					</div>
+				</section>
 
-        </main>
-        <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+			<!-- Main -->
+
+				<div id="main">
+
+					<div class="container">
+						<div class="row">
+						  	<div class="col-md-2"></div>
+						  	<div class="col-md-8">
+								<div class="inputBarSpace">
+									<input type="text" class="form-control" id="inputBar" placeholder="Enter Movie name">
+								</div>
+						  	</div>
+						  	<div class="col-md-2">
+								<button class="btn btn-success btn-My" id="submit">Search</button>
+						  	</div>
+						</div>
+					</div><br><br>
+
+					<div class="inner">
+
+					<!-- Boxes -->
+						<div class="thumbnails" id="movies">
+
+						</div>
+
+					</div>
+				</div>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<div class="inner">
+						<p class="copyright">&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>.</p>
+					</div>
+				</footer></main>
+
+		<!-- Scripts -->
+		<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
         <script>
             setTimeout(displayMain, 4000);
             function displayMain(){
-                document.getElementById("main").style.display = "block";
+                document.querySelector("main").style.display = "block";
                 document.getElementById("particles-js").style.display = "none";
             }
             let slideIndex=0;
@@ -105,11 +99,18 @@
         </script>
         <script>
             particlesJS.load("particles-js", "particles.json")
-        </script>
-        <script src="app.js"></script>
+		</script>
+		<script src="app.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    </body>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>

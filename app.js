@@ -51,20 +51,20 @@ function getMovies(id)
 
       // movies.forEach(function(movie){
         output += `
-        <br>
-        <div class="flip-card" style="margin-bottom:50px;margin-left: 30px;border-radius:20%;width:300px;height:450px;">
+        <div class="box">
+        <div class="flip-card">
           <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img src="${movie.Poster}" alt="Avatar" style="width:300px;height:450px; border-radius:20%;">
+              <div class="flip-card-front image fit">
+                <img src="${movie.Poster}" alt="Avatar">
               </div>
-            <div class="flip-card-back"  style="width:300px;height:450px;border-radius:20%;">
+            <div class="flip-card-back">
             <br>
               <h1>${movie.Title}</h1>
               <p>${movie.Year}</p>
               <a href="https://www.imdb.com/title/${movie.imdbID}/" role="button" class="btn btn-primary">Imdb Link</a>
             </div>
         </div>
-      </div>
+      </div></div>
         `
     //  })
 
@@ -102,20 +102,20 @@ function getMoviesOnLoad()
 
        movies['Search'].forEach(function(movie){
         output += `
-        <br>
-        <div class="flip-card" style="margin-bottom:50px;margin-left: 30px;border-radius:20%;width:300px;height:450px;">
+        <div class="box">
+        <div class="flip-card">
           <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img src="${movie.Poster}" alt="Avatar" style="width:300px;height:450px; border-radius:20%;">
+              <div class="flip-card-front image fit">
+                <img src="${movie.Poster}" alt="Avatar">
               </div>
-            <div class="flip-card-back"  style="width:300px;height:450px;border-radius:20%;">
-            <br>
+            <div class="flip-card-back">
+              <br>
               <h1>${movie.Title}</h1>
               <p>${movie.Year}</p>
               <a href="https://www.imdb.com/title/${movie.imdbID}/" role="button" class="btn btn-primary">Imdb Link</a>
             </div>
         </div>
-      </div>
+      </div></div>
         `
       })
 
@@ -127,3 +127,4 @@ function getMoviesOnLoad()
   xhr.send();
 
 }
+getMoviesOnLoad();
