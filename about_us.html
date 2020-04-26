@@ -1,45 +1,90 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Movie Recommendation</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
         <style>
             .card-img-top {
                 width: 100%;
-                height: 25vw;
+                height: ;
                 object-fit: cover;
+            }
+            body{
+                background-image:  linear-gradient(to right, #000000 , #e74c3c);
+                font-family: "Open Sans";
+            }
+            footer{
+                color: #999999;
+            }
+            .card{
+                box-shadow: none;
+                background-color: transparent;
+                color: #999999;
+            }
+            .image{
+                position:relative;
+                overflow:hidden;
+                padding-bottom:100%;
+            }
+            .image img{
+                position: absolute;
+                max-width: 100%;
+                max-height: 100%;
+                top: 50%;
+                left: 50%;
+                transform: translateX(-50%) translateY(-50%);
+            }
+            .container-fluid{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
             }
         </style>
     </head>
     <body>
-        <div class="container">
-            
+        <navbar class="navbar navbar-expand-lg navbar-transparent bg-transparent">
+            <a class="navbar-brand" href="/">Home</a>
+            <ul class="navbar-nav mr-auto">
+                
+            </ul>
+        </navbar>
+        <div class="container-fluid" style="vertical-align: middle;">
             <div class="row mt-2">
-                <div class="card offset-1 offset-md-1 offset-sm-1 offset-lg-1 col-4 col-sm-4 col-md-4 col-lg-4">
-                    <img class="card-img-top" src="img/akhilkumar.JPG" class="card-img-top" alt="User's photo is too good to be visible">
+                <div class="card col-2 col-sm-2 col-md-2 col-lg-2">
+                    <div class="image">
+                        <img class="card-img-top" src="img/akhilkumar.JPG" class="card-img-top" alt="User's photo is too good to be visible">
+                    </div>
                     <div class="card-body">
                         <h5 class="card-title">Akhil Kumar Tatipamula</h5>
                         <a href="https://www.linkedin.com/in/akhilkumar1910/"><i class="fa fa-linkedin"></i></a>
                     </div>
                 </div>
-                <div class="card offset-2 offset-md-2 offset-sm-2 offset-lg-2 col-4 col-sm-4 col-md-4 col-lg-4">
-                    <img class="card-img-top" src="img/Abhishek.jpg" class="card-img-top" alt="User's photo is too good to be visible">
+                <div class="card offset-1 offset-md-1 offset-sm-1 offset-lg-1 col-2 col-sm-2 col-md-2 col-lg-2">
+                    <div class="image">    
+                        <img class="card-img-top" src="img/Abhishek.jpg" class="card-img-top" alt="User's photo is too good to be visible">
+                    </div>
                     <div class="card-body">
                         <h5 class="card-title">Abhishek Kumar</h5>
                         <a href="https://www.linkedin.com/in/abhishek-kumar-36005715a/"><i class="fa fa-linkedin"></i></a>
                     </div>
                 </div>
-            </div>
-            <div class="row mt-2">
-                <div class="card offset-1 offset-md-1 offset-sm-1 offset-lg-1 col-4 col-sm-4 col-md-4 col-lg-4">
-                    <img class="card-img-top" src="img/venkatesh.jpg" class="card-img-top" alt="User's photo is too good to be visible">
+                <div class="card offset-2 offset-md-2 offset-sm-2 offset-lg-2 col-2 col-sm-2 col-md-2 col-lg-2">
+                    <div class="image">
+                        <img class="card-img-top" src="img/venkatesh.jpg" class="card-img-top" alt="User's photo is too good to be visible">
+                    </div>
                     <div class="card-body">
                         <h5 class="card-title">Venkatesh</h5>
                         <a href="https://www.linkedin.com/in/venky-shetty-345b6b147/"><i class="fa fa-linkedin"></i></a>
                     </div>
                 </div>
-                <div class="card offset-2 offset-md-2 offset-sm-2 offset-lg-2 col-4 col-sm-4 col-md-4 col-lg-4">
-                    <img class="card-img-top" src="img/manik.jpg" class="card-img-top" alt="User's photo is too good to be visible">
+                <div class="card offset-1 offset-md-1 offset-sm-1 offset-lg-1 col-2 col-sm-2 col-md-2 col-lg-2">
+                    <div class="image">
+                        <img class="card-img-top" src="img/manik.jpg" class="card-img-top" alt="User's photo is too good to be visible">
+                    </div>
                     <div class="card-body">
                         <h5 class="card-title">Manik Agarwal</h5>
                         <a href="https://www.linkedin.com/in/manik-agarwal-30a66380/"><i class="fa fa-linkedin"></i></a>
@@ -47,5 +92,8 @@
                 </div>
             </div>
         </div>
+        <footer class="fixed-bottom container">
+            This tool is developed so that people who are in quarantine can have fun. We are currently learning new skills so that one day we will all rule the world.
+        </footer>
     </body>
 </html>
