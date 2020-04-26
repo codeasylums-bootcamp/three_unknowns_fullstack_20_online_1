@@ -5,7 +5,7 @@ function getMovies()
 {
   var search = document.getElementById('inputBar').value;
   const xhr = new XMLHttpRequest();
-  xhr.open('GET',`http://www.omdbapi.com/?s=${search}&apikey=2fe665da`,true);
+  xhr.open('GET',`https://www.omdbapi.com/?s=${search}&apikey=2fe665da`,true);
   xhr.onload = function(){
 
     console.log(this.status);
