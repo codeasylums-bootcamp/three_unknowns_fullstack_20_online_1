@@ -36,10 +36,29 @@
 
 /* Style the back side */
 .flip-card-back {
-  background-color: rgb(106, 255, 46);
+  background-color: #f0e2dd;
   transform: rotateY(180deg);
 }
 
 .btn-success {
   background-color: rgb(106, 255, 46);
+}
+
+
+body {
+	background: linear-gradient(-45deg, #000000, #202020, #6d6e6e, #8e9191);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
