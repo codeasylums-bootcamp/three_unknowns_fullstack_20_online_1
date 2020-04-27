@@ -49,24 +49,37 @@ function getMovies(id)
       var movie = JSON.parse(this.response);
       console.log(this.response);
 
-      // movies.forEach(function(movie){
+ 
         output += `
         <br>
-        <div class="flip-card" style="margin-bottom:50px;margin-left: 30px;border-radius:20%;width:300px;height:450px;">
+        <div class="flip-card" style="margin-bottom:50px;margin-left: 30px;border-radius:2%;width:300px;height:450px;">
           <div class="flip-card-inner">
               <div class="flip-card-front">
-                <img src="${movie.Poster}" alt="Avatar" style="width:300px;height:450px; border-radius:20%;">
+
+                <img src="${movie.Poster}" alt="Avatar" style="width:300px;height:450px; border-radius:2%;">
+
               </div>
-            <div class="flip-card-back"  style="width:300px;height:450px;border-radius:20%;">
+            <div class="flip-card-back"  style="width:300px;height:450px;border-radius:2%;">
             <br>
-              <h1>${movie.Title}</h1>
-              <p>${movie.Year}</p>
-              <a href="https://www.imdb.com/title/${movie.imdbID}/" role="button" class="btn btn-primary">Imdb Link</a>
+             <div class="container">
+             <div class="movie-details">
+
+             <h5>${movie.Title}</h5>
+             <p><b>Relase Date</b> : ${movie.Released}<p>
+             <p><b>Imdb Ratings : ${movie.imdbRating}</b></p>
+             <p><b>Directed By</b> : ${movie.Director}</p>
+             <p><b>Cast</b> : ${movie.Actors} </p>
+             <p><b>Plot</b> : ${movie.Plot}</p>
+             
+
+             </div>
+             </div>
+              
             </div>
         </div>
       </div>
         `
-    //  })
+
 
       document.getElementById('movies').innerHTML += output ;
     }
@@ -76,9 +89,6 @@ function getMovies(id)
   xhr.send();
 
 }
-
-
-
 
 /*--------------------------------------------------------------------------------------------------------------------------------------*/
 
@@ -90,36 +100,16 @@ function getMoviesOnLoad()
   xhr.open('GET',`https://www.omdbapi.com/?s=Avengers&apikey=cb8aa8be`,true);
   xhr.onload = function(){
 
-    // console.log(this.status);
-
     if(this.status===200)
     {
       
       let output ='';
       var movies = JSON.parse(this.response);
-      console.log(this.response);
-  
-
-       movies['Search'].forEach(function(movie){
-        output += `
-        <br>
-        <div class="flip-card" style="margin-bottom:50px;margin-left: 30px;border-radius:20%;width:300px;height:450px;">
-          <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img src="${movie.Poster}" alt="Avatar" style="width:300px;height:450px; border-radius:20%;">
-              </div>
-            <div class="flip-card-back"  style="width:300px;height:450px;border-radius:20%;">
-            <br>
-              <h1>${movie.Title}</h1>
-              <p>${movie.Year}</p>
-              <a href="https://www.imdb.com/title/${movie.imdbID}/" role="button" class="btn btn-primary">Imdb Link</a>
-            </div>
-        </div>
-      </div>
-        `
+      
+      movies['Search'].forEach(function(movie){
+      var id = movie.imdbID ;
+      getMovies(id);
       })
-
-      document.getElementById('movies').innerHTML = output;
     }
    
   }
