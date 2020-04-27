@@ -35,6 +35,8 @@ http://www.omdbapi.com/
 
 For any queries contact on kumarsingh14abhishek@gmail.com. Happy Binge Watching !!
 
+#How To Access the Website :
+
 <a href="https://www.youtube.com/watch?v=co8rm5V4itI&feature=youtu.befeature=player_embedded&v=co8rm5V4itI
-" target="_blank"><img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.business2community.com%2Fsocial-media%2Fhow-to-add-video-to-your-social-media-campaign-0450891&psig=AOvVaw0ka-g2rgmu2k3P5GbdyMdo&ust=1588088062136000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMiZ1pr3iOkCFQAAAAAdAAAAABAD" 
+" target="_blank"><img src="https://www.clipartwiki.com/clipimg/detail/203-2038082_cinema-clipart-movie-maker-film-png-icon.png" 
 alt="How To Use " width="240" height="180" border="10" /></a>
