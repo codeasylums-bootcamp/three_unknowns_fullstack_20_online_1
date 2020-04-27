@@ -52,14 +52,14 @@ function getMovies(id)
  
         output += `
         <br>
-        <div class="flip-card" style="margin-bottom:50px;margin-left: 30px;border-radius:2%;width:300px;height:450px;">
+        <div class="flip-card" style="margin-bottom:50px;margin-left: 30px;border-radius:2%;width:300px;height:480px;">
           <div class="flip-card-inner">
               <div class="flip-card-front">
 
-                <img src="${movie.Poster}" alt="Avatar" style="width:300px;height:450px; border-radius:2%;">
+                <img src="${movie.Poster}" alt="Avatar" style="width:300px;height:480px; border-radius:2%;">
 
               </div>
-            <div class="flip-card-back"  style="width:300px;height:450px;border-radius:2%;">
+            <div class="flip-card-back"  style="width:300px;height:480px;border-radius:2%;">
             <br>
              <div class="container">
              <div class="movie-details">
